@@ -1,4 +1,4 @@
-import javax.xml.bind.*; // for DatatypeConverter; requires Java 6 or JAXB 1.0
+import javax.xml.bind.*;
 
 public class InstanceCallbackDigestUserInterface {
 
@@ -34,8 +34,7 @@ public class InstanceCallbackDigestUserInterface {
     public static void main(String[] args) {
         for (String filename : args) {
             // Calculate the digest
-            InstanceCallbackDigestUserInterface d
-                    = new InstanceCallbackDigestUserInterface(filename);
+            InstanceCallbackDigestUserInterface d = new InstanceCallbackDigestUserInterface(filename);
             d.calculateDigest();
         }
     }
