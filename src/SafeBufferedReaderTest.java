@@ -1,7 +1,6 @@
-import java.io.*;
-import java.util.Arrays;
-
 import junit.framework.TestCase;
+
+import java.io.*;
 
 
 public class SafeBufferedReaderTest extends TestCase {
