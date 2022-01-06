@@ -6,8 +6,8 @@ public class DMoz {
     public static void main(String[] args) {
 
         String target = "";
-        for (int i = 0; i < args.length; i++) {
-            target += args[i] + " ";
+        for (String arg : args) {
+            target += arg + " ";
         }
         target = target.trim();
 

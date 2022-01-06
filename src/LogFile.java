@@ -10,7 +10,7 @@ public class LogFile {
         this.out = new BufferedWriter(fw);
     }
 
-    public void writeEntry(String message) throws IOException {
+    public synchronized void writeEntry(String message) throws IOException {
         Date d = new Date();
         out.write(d.toString());
         out.write('\t');

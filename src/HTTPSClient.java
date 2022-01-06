@@ -14,8 +14,7 @@ public class HTTPSClient {
         int port = 443; // default https port
         String host = args[0];
 
-        SSLSocketFactory factory
-                = (SSLSocketFactory) SSLSocketFactory.getDefault();
+        SSLSocketFactory factory = (SSLSocketFactory) SSLSocketFactory.getDefault();
         try (SSLSocket socket = (SSLSocket) factory.createSocket(host, port)) {
 
             // enable all the suites
@@ -30,8 +29,7 @@ public class HTTPSClient {
             out.flush();
 
             // read response
-            BufferedReader in = new BufferedReader(
-                    new InputStreamReader(socket.getInputStream()));
+            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
             // read the header
             String s;

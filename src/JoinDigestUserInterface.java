@@ -1,3 +1,5 @@
+import thread.ReturnDigest;
+
 import javax.xml.bind.DatatypeConverter;
 
 public class JoinDigestUserInterface {
