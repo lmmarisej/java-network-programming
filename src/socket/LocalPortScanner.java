@@ -1,5 +1,7 @@
-import java.io.*;
-import java.net.*;
+package socket;
+
+import java.io.IOException;
+import java.net.ServerSocket;
 
 public class LocalPortScanner {
 
@@ -10,6 +12,7 @@ public class LocalPortScanner {
                 // the next line will fail and drop into the catch block if
                 // there is already a server running on the port
                 ServerSocket server = new ServerSocket(port);
+                server.close();
             } catch (IOException ex) {
                 System.out.println("There is a server on port " + port + ".");
             }
