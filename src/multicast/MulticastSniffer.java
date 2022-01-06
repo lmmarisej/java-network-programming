@@ -1,3 +1,5 @@
+package multicast;
+
 import java.io.*;
 import java.net.*;
 
@@ -12,10 +14,8 @@ public class MulticastSniffer {
         try {
             group = InetAddress.getByName(args[0]);
             port = Integer.parseInt(args[1]);
-        } catch (ArrayIndexOutOfBoundsException | NumberFormatException
-                | UnknownHostException ex) {
-            System.err.println(
-                    "Usage: java MulticastSniffer multicast_address port");
+        } catch (ArrayIndexOutOfBoundsException | NumberFormatException | UnknownHostException ex) {
+            System.err.println("Usage: java MulticastSniffer multicast_address port");
             System.exit(1);
         }
 
